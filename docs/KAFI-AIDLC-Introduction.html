@@ -1171,7 +1171,7 @@ body { transition: background-color .2s ease, color .2s ease; }
   </div>
 </div>
 <div class="v1-banner">
-<div class="v1-eyebrow">KAFI AI-DLC · v1.0.12</div>
+<div class="v1-eyebrow">KAFI AI-DLC · v1.0.14</div>
 <h2><span data-i18n lang="en">This is the v1.0 introduction.</span><span data-i18n lang="vi">Đây là bản giới thiệu v1.0.</span></h2><p><span data-i18n lang="en">One universal release serves <strong>Codex</strong>, <strong>Claude Code</strong> and <strong>Kiro</strong>. A v0.3–v0.9.x project upgrades directly; there are no staged hops. The v0.x material that used to live on this page is summarised as history in <a href="KAFI-AIDLC-Whats-New.html">What changed</a>.</span><span data-i18n lang="vi">Một release universal phục vụ cả <strong>Codex</strong>, <strong>Claude Code</strong> và <strong>Kiro</strong>. Dự án v0.3–v0.9.x nâng cấp thẳng lên, không đi qua bước trung gian nào. Phần nội dung v0.x từng nằm ở trang này được tóm tắt thành lịch sử trong <a href="KAFI-AIDLC-Whats-New.html">Có gì thay đổi</a>.</span></p>
 </div>
 
@@ -1242,9 +1242,9 @@ body { transition: background-color .2s ease, color .2s ease; }
 │   ├── state.md            derived project state — generated, never authored
 │   ├── audit/              interactions · approvals · exceptions · events
 │   └── migrations/         upgrade and restructuring records
-├── discovery/              reverse engineering · keyed to the project, not per repo
+├── discovery/              project charter · reverse engineering · keyed to the project, not per repo
 │   └── references/         promoted reference material
-├── requirements/           vision, PRD, epics, stories, rules, glossary
+├── requirements/           PRD, requirements, epics, user stories, use cases, business rules, metric specs
 ├── design/                 architecture, ADRs, data model, UI/UX, NFR
 │   └── contracts/          REST, GraphQL, RPC, async, message, data, frontend
 ├── delivery/
@@ -1264,9 +1264,9 @@ body { transition: background-color .2s ease, color .2s ease; }
 │   ├── state.md            trạng thái dẫn xuất — sinh ra, không ai viết tay
 │   ├── audit/              interaction · approval · exception · event
 │   └── migrations/         hồ sơ nâng cấp và tái cấu trúc
-├── discovery/              reverse engineering · khoá theo dự án, không theo từng repo
+├── discovery/              project charter · reverse engineering · khoá theo dự án, không theo từng repo
 │   └── references/         tài liệu tham chiếu được đưa vào
-├── requirements/           vision, PRD, epic, story, business rule, glossary
+├── requirements/           PRD, requirement, epic, user story, use case, business rule, metric spec
 ├── design/                 kiến trúc, ADR, data model, UI/UX, NFR
 │   └── contracts/          REST, GraphQL, RPC, async, message, data, frontend
 ├── delivery/
@@ -1286,7 +1286,7 @@ body { transition: background-color .2s ease, color .2s ease; }
     <tbody>
       <tr><td><strong><span data-i18n lang="en">Governance</span><span data-i18n lang="vi">Governance</span></strong></td><td><span data-i18n lang="en">Who the project is, and what it has decided about itself</span><span data-i18n lang="vi">Dự án là ai, và đã tự quyết những gì về mình</span></td><td>project · team · components · registry · activation policy · quality policy · policy evaluation · claim · link · open items</td></tr>
       <tr><td><strong><span data-i18n lang="en">Audit records</span><span data-i18n lang="vi">Audit record</span></strong></td><td><span data-i18n lang="en">Immutable facts. Append-only; never edited, only superseded</span><span data-i18n lang="vi">Sự kiện bất biến. Chỉ ghi thêm; không sửa, chỉ thay thế</span></td><td>approval · interaction · impact · artifact claim · activation event · generic event · exception waiver · revocation / supersede · external deployment ref</td></tr>
-      <tr><td><strong><span data-i18n lang="en">Discovery &amp; requirements</span><span data-i18n lang="vi">Discovery &amp; requirements</span></strong></td><td><span data-i18n lang="en">What is being built, and why</span><span data-i18n lang="vi">Đang xây cái gì, và vì sao</span></td><td>vision · brief · PRD · requirements · epic · user story · story map · personas · user flows · business rules · glossary · discovery item · delivery plan · risk register · technical environment · knowledge sources</td></tr>
+      <tr><td><strong><span data-i18n lang="en">Discovery &amp; requirements</span><span data-i18n lang="vi">Discovery &amp; requirements</span></strong></td><td><span data-i18n lang="en">What is being built, and why</span><span data-i18n lang="vi">Đang xây cái gì, và vì sao</span></td><td>project charter · brief · PRD · requirements · epic · user story · use case · story map · user flows · business rules · metric spec · glossary · discovery item · delivery plan · technical environment · knowledge sources</td></tr>
       <tr><td><strong><span data-i18n lang="en">Brownfield</span><span data-i18n lang="vi">Brownfield</span></strong></td><td><span data-i18n lang="en">What already exists — one knowledge base per project, never one per repository</span><span data-i18n lang="vi">Cái đã tồn tại — một knowledge base cho cả dự án, không phải mỗi repo một cái</span></td><td>system overview · as-is architecture · as-is assessment · code structure · API inventory · technology stack · component inventory · dependency inventory · reuse recommendation · reverse engineering plan · legacy health baseline · characterization evidence</td></tr>
       <tr><td><strong><span data-i18n lang="en">Design</span><span data-i18n lang="vi">Design</span></strong></td><td><span data-i18n lang="en">How it is built, and the decisions behind it</span><span data-i18n lang="vi">Xây bằng cách nào, và những quyết định đứng sau</span></td><td>conceptual · application · component · infrastructure design · design-lite · ADR · data model · view model · UI/UX spec · design tokens · NFR requirements and design · security &amp; privacy · availability / DR · architecture assurance (+ trigger) · user flows</td></tr>
       <tr><td><strong><span data-i18n lang="en">Contracts</span><span data-i18n lang="vi">Contracts</span></strong></td><td><span data-i18n lang="en">The interfaces between components, versioned with the design</span><span data-i18n lang="vi">Giao diện giữa các component, version cùng với thiết kế</span></td><td>REST · GraphQL · RPC · async · message · data · frontend · infrastructure · fix</td></tr>
@@ -1309,7 +1309,7 @@ body { transition: background-color .2s ease, color .2s ease; }
       <tr><td><strong>S1</strong> <span data-i18n lang="en">Workspace Detection</span><span data-i18n lang="vi">Phát hiện workspace</span></td><td><span data-i18n lang="en">project · team · components · registry · state · link</span><span data-i18n lang="vi">project · team · components · registry · state · link</span></td><td><span data-i18n lang="en">Project Configuration, when new or changed</span><span data-i18n lang="vi">Project Configuration, khi mới hoặc có thay đổi</span></td></tr>
       <tr><td><strong>S2</strong> <span data-i18n lang="en">Context Loading</span><span data-i18n lang="vi">Nạp ngữ cảnh</span></td><td><span data-i18n lang="en">knowledge sources · technical environment</span><span data-i18n lang="vi">knowledge sources · technical environment</span></td><td><span data-i18n lang="en">none</span><span data-i18n lang="vi">không có</span></td></tr>
       <tr><td><strong>S3</strong> <span data-i18n lang="en">Reverse Engineering</span><span data-i18n lang="vi">Reverse engineering</span></td><td><span data-i18n lang="en">reverse engineering plan · system overview · as-is architecture · as-is assessment · code structure · API inventory · technology stack · component inventory · dependency inventory · reuse recommendation · legacy health baseline · characterization evidence · assembled report</span><span data-i18n lang="vi">reverse engineering plan · system overview · as-is architecture · as-is assessment · code structure · API inventory · technology stack · component inventory · dependency inventory · reuse recommendation · legacy health baseline · characterization evidence · báo cáo tổng hợp</span></td><td><span data-i18n lang="en">Current-State Baseline</span><span data-i18n lang="vi">Current-State Baseline</span></td></tr>
-      <tr><td><strong>S4</strong> <span data-i18n lang="en">Requirements Analysis</span><span data-i18n lang="vi">Phân tích yêu cầu</span></td><td><span data-i18n lang="en">brief · vision · PRD · requirements · business rules · glossary · personas · risk register · discovery item</span><span data-i18n lang="vi">brief · vision · PRD · requirements · business rules · glossary · personas · risk register · discovery item</span></td><td><span data-i18n lang="en">Requirements</span><span data-i18n lang="vi">Requirements</span></td></tr>
+      <tr><td><strong>S4</strong> <span data-i18n lang="en">Requirements Analysis</span><span data-i18n lang="vi">Phân tích yêu cầu</span></td><td><span data-i18n lang="en">brief · project charter · PRD · requirements · business rules · metric spec · glossary · discovery item</span><span data-i18n lang="vi">brief · project charter · PRD · requirements · business rules · metric spec · glossary · discovery item</span></td><td><span data-i18n lang="en">Requirements</span><span data-i18n lang="vi">Requirements</span></td></tr>
       <tr><td><strong>S5</strong> <span data-i18n lang="en">Stories / Conceptual Design</span><span data-i18n lang="vi">Story / thiết kế khái niệm</span></td><td><span data-i18n lang="en">epics · user stories with acceptance criteria · story map · conceptual design</span><span data-i18n lang="vi">epic · user story kèm acceptance criteria · story map · conceptual design</span></td><td><span data-i18n lang="en">Requirements</span><span data-i18n lang="vi">Requirements</span></td></tr>
       <tr><td><strong>S6</strong> <span data-i18n lang="en">Workflow Planning</span><span data-i18n lang="vi">Lập kế hoạch workflow</span></td><td><span data-i18n lang="en">delivery plan · policy evaluation — the resolved stage and document set for this work</span><span data-i18n lang="vi">delivery plan · policy evaluation — tập stage và tài liệu đã giải cho việc này</span></td><td><span data-i18n lang="en">automated checkpoint; read again at Ready</span><span data-i18n lang="vi">checkpoint tự động; đọc lại ở Ready</span></td></tr>
       <tr><td><strong>S7</strong> <span data-i18n lang="en">Product / UI/UX Design</span><span data-i18n lang="vi">Thiết kế sản phẩm / UI/UX</span></td><td><span data-i18n lang="en">UI/UX spec · user flows · design tokens · view model · design-lite · frontend contract</span><span data-i18n lang="vi">UI/UX spec · user flow · design token · view model · design-lite · frontend contract</span></td><td><span data-i18n lang="en">UI/UX Design</span><span data-i18n lang="vi">UI/UX Design</span></td></tr>
@@ -1357,12 +1357,12 @@ body { transition: background-color .2s ease, color .2s ease; }
     <li><a href="ai-dlc-v1.0-install-upgrade-by-prompt.html"><span data-i18n lang="en">Install and operate</span><span data-i18n lang="vi">Cài đặt và vận hành</span></a> — <span data-i18n lang="en">installing, upgrading, joining an existing project, and the command reference.</span><span data-i18n lang="vi">cài, nâng cấp, tham gia một dự án đã có, và tra cứu lệnh.</span></li>
     <li><a href="ai-dlc-v1.0-role-guides.html"><span data-i18n lang="en">Scenarios and Roles</span><span data-i18n lang="vi">Kịch bản và Role</span></a> — <span data-i18n lang="en">start from your situation; per-role guides follow.</span><span data-i18n lang="vi">bắt đầu từ tình huống của bạn; hướng dẫn theo từng role nằm ngay sau.</span></li>
     <li><a href="AI-DLC-v1.0-runbook.html"><span data-i18n lang="en">Operating Manual</span><span data-i18n lang="vi">Sổ tay vận hành</span></a> — <span data-i18n lang="en">the day-to-day procedures.</span><span data-i18n lang="vi">quy trình dùng hằng ngày.</span></li>
-    <li><a href="KAFI-AIDLC-Whats-New.html"><span data-i18n lang="en">What changed</span><span data-i18n lang="vi">Có gì thay đổi</span></a> — v0.3 <span data-i18n lang="en">to</span><span data-i18n lang="vi">tới</span> v1.0.12.</li>
+    <li><a href="KAFI-AIDLC-Whats-New.html"><span data-i18n lang="en">What changed</span><span data-i18n lang="vi">Có gì thay đổi</span></a> — v0.3 <span data-i18n lang="en">to</span><span data-i18n lang="vi">tới</span> v1.0.14.</li>
   </ul>
 </section>
 
 <footer>
-  <span>KAFI Transformation Office · AI-DLC v1.0.12 · <span data-i18n lang="en">Introduction</span><span data-i18n lang="vi">Giới thiệu</span></span>
+  <span>KAFI Transformation Office · AI-DLC v1.0.14 · <span data-i18n lang="en">Introduction</span><span data-i18n lang="vi">Giới thiệu</span></span>
 </footer>
 
 </div>

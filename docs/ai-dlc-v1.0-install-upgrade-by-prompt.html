@@ -135,7 +135,7 @@ footer{border-top:1px solid var(--border);margin-top:40px}
       <a href="#fresh-install">Cài mới</a>
       <a href="#review-plan">Đọc plan trước khi phê duyệt</a>
       <a href="#approve-plan">Phê duyệt digest</a>
-      <a href="#upgrade-v1">Nâng cấp từ v1.0.0–v1.0.11</a>
+      <a href="#upgrade-v1">Nâng cấp từ v1.0.0–v1.0.12</a>
       <a href="#upgrade-v0">Nâng cấp trực tiếp từ v0.3–v0.9.x</a>
       <a href="#when-blocked">Khi phát hiện có vấn đề</a>
       <a href="#verify-install">Xác minh sau khi cài</a>
@@ -398,7 +398,15 @@ Plan: /tmp/kafi-aidlc-&lt;id&gt;/plan.md</code></pre>
   </section>
   <section id="upgrade-v0">
     <a id="upgrade-v1"></a>
-    <h2>Nâng cấp từ v1.0.0–v1.0.11: bộ tài liệu đổi hình dạng</h2>
+    <h2>Nâng cấp từ v1.0.0–v1.0.12: bộ tài liệu đổi hình dạng</h2>
+    <p><strong>Từ v1.0.12 lên v1.0.14.</strong> v1.0.13 chưa bao giờ được phát hành; mọi thứ nó soạn nằm trong v1.0.14, nên đây là một bước nâng cấp duy nhất. Cài v1.0.14 lên v1.0.12 không viết lại tài liệu nào của dự án. Chạy <code>/kafi-aidlc-check</code> rồi <code>/kafi-aidlc-next</code>; <code>next</code> hỏi có migrate không (từ chối không mất gì), và nếu đồng ý thì một lần <code>DOC-MIG</code> do PO/PM duyệt, từng dòng có thể từ chối, đọc <code>DOC-SHAPE-1.0.14.md</code> và đưa Hub tới hình dạng mới:</p>
+    <ul>
+      <li><strong>Project Charter</strong> hợp nhất <code>vision.md</code>, <code>prd.md</code> và <code>risk-register.md</code>: một dòng <code>Merge</code>, rồi <code>Retire</code>, rồi <code>Re-approve</code>.</li>
+      <li><strong><code>Move</code></strong>: story từ <code>requirements/stories/</code> sang <code>requirements/user-stories/</code>, giữ nguyên ID.</li>
+      <li><strong><code>Merge</code></strong>: các file <code>requirements/business-rules/&lt;domain&gt;.md</code> thành một file <code>requirements/business-rules.md</code>.</li>
+      <li><strong>Phần còn lại là bổ sung</strong> và chỉ áp dụng cho tài liệu viết mới: <code>requirements/</code> đã có từ v1.0.12, còn <code>use-case/</code> và <code>metric-spec/</code> là mới; metric spec, cột <code>Git email</code> và RACI trong <code>team.md</code>, bố cục REQ và user story, hai thư mục README, bố cục dossier Slice/CR. Body đã duyệt không bao giờ bị sửa hay gộp ngầm. Riêng <code>overview/project-context.md</code> đổi từ 4 sang 6 cột, và chỉ trên một Hub từng chạy bản pre-release v1.0.13.</li>
+      <li><strong>Dự án đã onboarding xong từ trước</strong> mà <code>project.md</code> chưa có dòng <code>Korbit project:</code>, hoặc <code>.mcp.json</code> chưa có mục <code>kafi-korbit</code>, được báo ở cuối upgrade là chạy <code>kafi-aidlc-onboarding</code>; <code>status</code> và <code>next</code> xếp việc đó đầu danh sách việc tiếp theo.</li>
+    </ul>
     <p><strong>Từ v1.0.10 hoặc v1.0.11 lên v1.0.12.</strong> Phần lớn v1.0.12 là xoá bỏ, và xoá bỏ không làm một file đang hợp lệ thành không hợp lệ: mọi ngân sách số từ, <code>FILE_OVER_BUDGET</code>, <code>FOLDER_OVER_BUDGET</code> và giới hạn ký tự trên dòng register đều biến mất, nên một dự án không làm gì vẫn giữ mọi tài liệu hợp lệ và thôi bị báo là file quá dài. Chạy <code>/kafi-aidlc-check</code> rồi <code>/kafi-aidlc-next</code>; <code>DOC-MIG</code> đề xuất, từng dòng có thể từ chối:</p>
     <ul>
       <li><strong><code>Header</code></strong> thêm dòng <code>Readers:</code> vào mỗi tài liệu sống, và trên bốn loại tài liệu sống từng ghi giá trị <code>Freshness</code> vào <code>Status:</code> thì đổi <code>Status: Current</code> thành giá trị vòng đời (<code>Draft | In review | Approved</code>). Không đổi body, không làm mất phê duyệt nào.</li>

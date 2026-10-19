@@ -213,6 +213,7 @@ footer a:hover{text-decoration:underline;}
   <a href="#tl"><span class="rd" style="--rc:var(--tl)"></span>Tech Lead</a>
   <a href="#dev"><span class="rd" style="--rc:var(--dev)"></span>Dev</a>
   <a href="#qa"><span class="rd" style="--rc:var(--qa)"></span>QA</a>
+  <a href="#da"><span class="rd" style="--rc:var(--qa)"></span>DA</a>
   <a href="#sre"><span class="rd" style="--rc:var(--ops)"></span>SRE</a>
   <a href="#vendor"><span class="rd" style="--rc:var(--vendor)"></span>Vendor</a>
   <div class="ctrls">
@@ -249,7 +250,7 @@ footer a:hover{text-decoration:underline;}
       <thead><tr><th><span data-i18n lang="en">Command</span><span data-i18n lang="vi">Lệnh</span></th><th><span data-i18n lang="en">You are asking</span><span data-i18n lang="vi">Bạn đang hỏi</span></th></tr></thead>
       <tbody>
         <tr><td><code>/kafi-aidlc-onboarding</code></td><td><span data-i18n lang="en">How do I start, or join?</span><span data-i18n lang="vi">Bắt đầu, hoặc tham gia, thế nào?</span></td></tr>
-        <tr><td><code>/kafi-aidlc-status</code></td><td><span data-i18n lang="en">Where are we?</span><span data-i18n lang="vi">Đang ở đâu?</span></td></tr>
+        <tr><td><code>/kafi-aidlc-status</code></td><td><span data-i18n lang="en">Where are we? Add a view — <code>pm</code>, <code>po</code>, <code>ba</code>, <code>da</code>, <code>designer</code>, <code>tl</code>, <code>dev</code> or <code>qa</code> — to see your role's part of the answer.</span><span data-i18n lang="vi">Đang ở đâu? Thêm một view — <code>pm</code>, <code>po</code>, <code>ba</code>, <code>da</code>, <code>designer</code>, <code>tl</code>, <code>dev</code> hoặc <code>qa</code> — để xem phần của vai bạn trong câu trả lời.</span></td></tr>
         <tr><td><code>/kafi-aidlc-next</code></td><td><span data-i18n lang="en">What do I do next?</span><span data-i18n lang="vi">Làm gì tiếp?</span></td></tr>
         <tr><td><code>/kafi-aidlc-check</code></td><td><span data-i18n lang="en">Is anything wrong?</span><span data-i18n lang="vi">Có gì sai không?</span></td></tr>
         <tr><td><code>/kafi-aidlc-bootstrap</code></td><td><span data-i18n lang="en">Install or upgrade the package here.</span><span data-i18n lang="vi">Cài hoặc nâng cấp package ở đây.</span></td></tr>
@@ -269,7 +270,7 @@ footer a:hover{text-decoration:underline;}
       <li><span data-i18n lang="en">Create an empty folder named after the project. Do not <code>git init</code> — the container is scaffolding, not a repository.</span><span data-i18n lang="vi">Tạo thư mục rỗng đặt tên theo dự án. Đừng <code>git init</code> — thư mục chứa là scaffolding, không phải repo.</span></li>
       <li><span data-i18n lang="en">Open your agent there and paste the canonical prompt from the <a href="ai-dlc-v1.0-install-upgrade-by-prompt.html#canonical-prompt">install guide</a>. Read the plan; approve it in your own words.</span><span data-i18n lang="vi">Mở agent ở đó và dán prompt chuẩn trong <a href="ai-dlc-v1.0-install-upgrade-by-prompt.html#canonical-prompt">hướng dẫn cài đặt</a>. Đọc plan; duyệt bằng lời của bạn.</span></li>
       <li><code>/kafi-aidlc-onboarding</code> — <span data-i18n lang="en">answer identity, the roles you hold, the Hub, and the profile. The wizard asks only what no repository can witness.</span><span data-i18n lang="vi">trả lời danh tính, các vai bạn giữ, Hub, và profile. Wizard chỉ hỏi những gì không repo nào chứng thực được.</span></li>
-      <li><code>/kafi-aidlc-next</code> — <span data-i18n lang="en">the agent drafts the brief, vision and requirements; you approve at the Requirements gate.</span><span data-i18n lang="vi">agent soạn brief, vision và requirements; bạn duyệt ở gate Requirements.</span></li>
+      <li><code>/kafi-aidlc-next</code> — <span data-i18n lang="en">the agent drafts the brief, the Project Charter and requirements; you approve at the Requirements gate.</span><span data-i18n lang="vi">agent soạn brief, Project Charter và requirements; bạn duyệt ở gate Requirements.</span></li>
     </ol>
     <p class="note"><span data-i18n lang="en">If no Hub repository exists yet, answer <b>local-first</b>. The Hub starts as a local Git repository and binds a remote later; it is recorded as an open item, not a blocker.</span><span data-i18n lang="vi">Nếu chưa có repo Hub, trả lời <b>local-first</b>. Hub khởi tạo như một repo Git cục bộ và gắn remote sau; nó được ghi là open item, không phải blocker.</span></p>
 
@@ -342,6 +343,7 @@ footer a:hover{text-decoration:underline;}
         <tr><td>Tech Lead</td><td><span data-i18n lang="en">unit delivery · local technical design</span><span data-i18n lang="vi">giao hàng theo unit · thiết kế kỹ thuật cục bộ</span></td><td><span data-i18n lang="en">Technical Done</span><span data-i18n lang="vi">Technical Done</span></td></tr>
         <tr><td>Dev</td><td><span data-i18n lang="en">reviews agent output</span><span data-i18n lang="vi">rà soát đầu ra của agent</span></td><td><span data-i18n lang="en">none mandatory</span><span data-i18n lang="vi">không bắt buộc gate nào</span></td></tr>
         <tr><td>QA</td><td><span data-i18n lang="en">optional specialist; agent writes plans and tests</span><span data-i18n lang="vi">chuyên gia tuỳ chọn; agent viết test plan và test</span></td><td><span data-i18n lang="en">triggered by policy or risk</span><span data-i18n lang="vi">kích hoạt theo policy hoặc rủi ro</span></td></tr>
+        <tr><td>DA</td><td><span data-i18n lang="en">metric specs (<code>MET-NN</code>) at S4; their SQL, SQL tests and reconciliation results in the component repo</span><span data-i18n lang="vi">metric spec (<code>MET-NN</code>) ở S4; SQL, SQL test và kết quả đối soát của chúng trong repo component</span></td><td><span data-i18n lang="en">none of its own</span><span data-i18n lang="vi">không có gate riêng</span></td></tr>
         <tr><td>DevOps/SRE</td><td><span data-i18n lang="en">provisioning · access · production release</span><span data-i18n lang="vi">cấp phát · quyền truy cập · phát hành production</span></td><td><span data-i18n lang="en">SRE handoff · production</span><span data-i18n lang="vi">bàn giao SRE · production</span></td></tr>
         <tr><td><span data-i18n lang="en">Vendor</span><span data-i18n lang="vi">Nhà thầu</span></td><td><span data-i18n lang="en">assigned components, pruned tree</span><span data-i18n lang="vi">các component được giao, cây rút gọn</span></td><td><span data-i18n lang="en">per engagement in <code>components.md</code></span><span data-i18n lang="vi">theo hình thức hợp tác trong <code>components.md</code></span></td></tr>
       </tbody>
@@ -418,6 +420,15 @@ footer a:hover{text-decoration:underline;}
     </ol>
   </section>
 
+  <section id="da">
+    <h2><span class="rd" style="--rc:var(--qa)"></span>DA</h2>
+    <p><span data-i18n lang="en">The data analyst. A DA is Responsible for the metric spec of each number a dashboard or a report computes — one <code>MET-NN</code> file with its formula and validation checks, written at the end of S4 and approved by PO/PM at Requirements — and for the SQL, the SQL tests and the reconciliation results that deliver it, in the component repo. The role has no gate of its own.</span><span data-i18n lang="vi">Chuyên viên dữ liệu. DA chịu trách nhiệm metric spec của từng con số mà dashboard hoặc báo cáo tính ra — một file <code>MET-NN</code> với công thức và các validation check, viết ở cuối S4 và do PO/PM duyệt tại Requirements — cùng SQL, SQL test và kết quả đối soát chuyển giao nó, trong repo component. Vai này không có gate riêng.</span></p>
+    <ol>
+      <li><code>/kafi-aidlc-status da</code> — <span data-i18n lang="en">the DA view of where the work stands.</span><span data-i18n lang="vi">view DA về tình trạng công việc.</span></li>
+      <li><code>/kafi-aidlc-next</code> — <span data-i18n lang="en">the next action for the person your git account names in <code>team.md</code>; a Slice that delivers a metric gives its DA member a task in Korbit.</span><span data-i18n lang="vi">việc tiếp theo cho người mà tài khoản git của bạn khớp trong <code>team.md</code>; Slice chuyển giao một chỉ số sẽ giao cho thành viên DA một task trong Korbit.</span></li>
+    </ol>
+  </section>
+
   <section id="sre">
     <h2><span class="rd" style="--rc:var(--ops)"></span>DevOps / SRE</h2>
     <p><span data-i18n lang="en">Production is yours. Scenarios <a href="#s-provision-join">3</a>, <a href="#s-vendor">5</a>.</span><span data-i18n lang="vi">Production là của bạn. Kịch bản <a href="#s-provision-join">3</a>, <a href="#s-vendor">5</a>.</span></p>
@@ -441,7 +452,7 @@ footer a:hover{text-decoration:underline;}
   <section id="where-next">
     <h2><span data-i18n lang="en">Where to go next</span><span data-i18n lang="vi">Đi tiếp đâu</span></h2>
     <p><span data-i18n lang="en">Why the system is shaped this way: <a href="ai-dlc-v1.0-overview.html">Concepts</a>. Installing, joining and the full command reference: <a href="ai-dlc-v1.0-install-upgrade-by-prompt.html">Install and operate</a>. Flows, diagrams and the step-by-step procedures: <a href="AI-DLC-v1.0-runbook.html">Operating manual</a>. Where everything in a project lives and how to read it: <a href="https://thangtmkafi.github.io/AI-DLC/ai-dlc-v1.0-project-handbook.html">Project Handbook</a>.</span><span data-i18n lang="vi">Vì sao hệ thống có hình dạng này: <a href="ai-dlc-v1.0-overview.html">Khái niệm</a>. Cài đặt, tham gia và tham chiếu lệnh đầy đủ: <a href="ai-dlc-v1.0-install-upgrade-by-prompt.html">Cài đặt và vận hành</a>. Sơ đồ, luồng và thủ tục từng bước: <a href="AI-DLC-v1.0-runbook.html">Sổ tay vận hành</a>. Mọi thứ trong dự án nằm ở đâu và đọc thế nào: <a href="https://thangtmkafi.github.io/AI-DLC/ai-dlc-v1.0-project-handbook.html">Sổ tay dự án</a>.</span></p>
-    <p class="note">Content baseline: AI-DLC v1.0 Locked Spec · v1.0.12</p>
+    <p class="note">Content baseline: AI-DLC v1.0 Locked Spec · v1.0.14</p>
   </section>
 </main>
 
